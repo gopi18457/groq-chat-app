@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+.sidebar {
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #0d0d14;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding: 24px 14px;
+  font-family: 'DM Sans', sans-serif;
+  transition: width 0.3s ease;
+}
+
+.sidebar img {
+  width: 18px;
+  filter: invert(1);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.sidebar img:hover {
+  opacity: 1;
+}
+
+.sidebar .menu {
+  display: block;
+  margin-left: 6px;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+.sidebar .new-chat {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(249,115,22,0.12);
+  border: 1px solid rgba(249,115,22,0.25);
+  border-radius: 10px;
+  font-size: 13px;
+  color: #f97316;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.sidebar .new-chat:hover {
+  background: rgba(249,115,22,0.2);
+  border-color: rgba(249,115,22,0.4);
+}
+
+.sidebar .new-chat img {
+  filter: invert(60%) sepia(90%) saturate(500%) hue-rotate(340deg);
+  opacity: 1;
+}
+
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.sidebar .recent-title {
+  font-size: 10px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.sidebar .recent-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 2px;
+}
+
+.sidebar .recent-entry:hover {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.9);
+}
+
+.sidebar .recent-entry img {
+  opacity: 0.4;
+}
+
+.sidebar .recent-entry:hover img {
+  opacity: 0.8;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 16px;
+}
+
+.sidebar .bottom-item {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .sidebar { display: none; }
+}
